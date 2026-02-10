@@ -1,0 +1,36 @@
+.sidebar-menu {
+  --el-menu-bg-color: var(--menu-background-color);
+  --el-menu-text-color: var(--text-color);
+  --el-menu-hover-bg-color: #f2f2f2;
+  --el-menu-active-color: var(--primary-purple);
+}
+
+:global(.el-menu) {
+  border-right: 0px;
+}
+:global(.el-menu-item),
+:global(.el-sub-menu) {
+  svg {
+    margin-right: 8px;
+  }
+}
+
+:global(.el-menu-item) {
+  border-left: 4px solid transparent;
+}
+
+:global(.el-menu--inline > .el-menu-item) {
+  padding-left: 35px !important;
+
+  &::before {
+    content: '└';
+    color: var(--text-color) !important;
+  }
+}
+
+:global(.el-menu-item.is-active) {
+  color: var(--primary-purple);
+  font-weight: 600;
+  background-color: #f3f3f3;
+  border-left: 4px solid var(--primary-purple);
+}

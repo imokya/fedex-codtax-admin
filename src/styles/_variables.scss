@@ -1,0 +1,49 @@
+:root {
+  // 后端变量
+  --menu-text-color: #262626;
+  --menu-active-text-color: #ffffff;
+  --submenu-active-text-color: #f4f4f5;
+
+  --menu-background-color: #fff;
+  --menu-hover-color: #263445;
+  --submenu-background-color: #1f2d3d;
+  --submenu-hover-color: #001528;
+
+  --admin-header-height: 64px;
+  --navbar-height: 90px;
+  --sidebar-width: 250px;
+  --sidebar-hide-width: 55px;
+
+  // 前端变量
+  --frame-border-color: #e6e6e6;
+  --text-color: #333333;
+
+  --primary-purple: #4d148c;
+  --secondary-purple: #7d2ec3;
+  --plain-hover-color: transparent;
+  --primary-purple-hover: #9d60cc;
+
+  --primary-orange: #ff6200;
+  --primary-orange-hover: #e45528;
+
+  --button-disabled-text-color: #8e8e8e;
+  --button-disabled-bg-color: #f2f2f2;
+
+  --primary-blue: #007ab7;
+  --primary-blue-hover: #00689c;
+
+  --chat-header-height: 80px;
+  --chat-footer-height: 50px;
+  --chat-input-height: 210px;
+  --sidebar-tab-height: 60px;
+
+  // 聊天对话框
+  --chat-user-message-color: #fff;
+  --chat-user-message-border-color: #e6e6e6;
+  --chat-robot-message-color: #edf9f3;
+  --chat-robot-color: #008a00;
+  --chat-staff-color: var(--primary-purple);
+  --chat-staff-message-color: #f2f2f2;
+  --chat-transfer-color: var(--primary-purple);
+  --chat-transfer-message-color: #f3eae4;
+}

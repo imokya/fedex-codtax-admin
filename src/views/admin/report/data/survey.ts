@@ -1,0 +1,23 @@
+export const data = [
+  {
+    serialNumber: 13,
+    pushMechanism: '0/0',
+    serverDate: '2024/09/12',
+    customerWechatId: 'gbolhLVFwevfbfklsa',
+    customerNickname: 'fasfdasfaDEasWR',
+    chatDate: '2024/09/12',
+    accessTime: '14:23:45',
+    endTime: '14:25:45',
+    closeCode: '国际国内转换',
+    employeeId: 8789465,
+    managerId: 465135,
+    customerRating1: 5,
+    customerRating2: 5,
+    resolutionStatus: '是',
+    ratingReason: '无',
+    customerName: '张三',
+    customerPhone: '18000000000',
+    customerEmail: 'zhangsan@fedex.com',
+    customerFedexAccount: '83919292',
+  },
+];

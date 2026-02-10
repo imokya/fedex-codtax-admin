@@ -1,0 +1,86 @@
+:root {
+  --el-color-primary: var(--primary-purple);
+  --el-color-primary-light-3: var(--primary-purple-hover);
+  --el-color-primary-dark-2: var(--primary-purple);
+  --el-text-color-primary: var(--text-color);
+  --el-border-color: #8e8e8e;
+  --el-border-radius-base: 0;
+}
+
+.el-textarea {
+  --el-input-focus-border-color: var(--primary-purple);
+  --el-input-focus-border: var(--primary-purple);
+  --el-input-border-radius: 0;
+  --el-input-border-color: #8e8e8e;
+}
+
+.el-input,
+.el-date-editor {
+  --el-input-border-radius: 0;
+  --el-input-border-color: #8e8e8e;
+  --el-input-focus-border-color: var(--primary-purple);
+}
+
+.el-popper.is-customized {
+  padding: 6px 12px;
+  background: #f2f2f2;
+  border: 1px solid #8e8e8e;
+  border-radius: 0;
+  .el-popper__arrow::before {
+    background: #f2f2f2;
+    border: 1px solid #8e8e8e;
+  }
+}
+
+.el-picker-panel {
+  button.is-text {
+    color: var(--primary-blue);
+  }
+  button.is-disabled {
+    color: var(--button-disabled-text-color) !important;
+    background-color: var(--button-disabled-bg-color) !important;
+  }
+  button.is-plain {
+    border: 0;
+    background-color: var(--primary-orange);
+    color: #fff;
+    &:hover {
+      background-color: var(--primary-orange-hover);
+    }
+  }
+}
+
+/**
+* message
+*/
+.el-message--success {
+  font-size: 14px;
+  --el-message-bg-color: #f8f8f8;
+  --el-message-text-color: var(--text-color);
+  --el-message-border-color: #008a00;
+  border-radius: 0;
+  border-left: 4px solid #008a00;
+}
+
+.el-message--error {
+  font-size: 14px;
+  --el-message-bg-color: #fefafb;
+  --el-message-text-color: var(--text-color);
+  --el-message-border-color: #de002e;
+  border-radius: 0;
+  border-left: 4px solid #de002e;
+}
+
+/*
+ * loading
+*/
+.el-loading-spinner {
+  svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  p {
+    font-size: 14px !important;
+    margin-top: 10px !important;
+  }
+}

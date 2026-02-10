@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: FedExSans, -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Helvetica Neue', STHeiti, 'Microsoft Yahei', Tahoma, Simsun, sans-serif !important;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+  -webkit-text-fill-color: #aaaaaa;
+  transition: background-color 50000000s linear 0s;
+  background-color: transparent !important;
+}
+
+.svg-wrap {
+  padding: 6px 5px 6px 15px;
+  color: #889aa4;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#app {
+  height: 100%;
+}
+
+.page {
+  min-height: 100%;
+}
