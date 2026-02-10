@@ -37,28 +37,18 @@ clearLoginInfo();
   <div class="page login">
     <login-header />
     <div class="login-auth">
-      <div class="login-auth-title">登录微聊平台</div>
+      <div class="login-auth-title">到付税金管理平台</div>
       <div class="login-auth-info">
         <div class="login-auth-info-label">
           <svg-icon icon="login-user" />通过FedEx登录
         </div>
         <div class="flex flex-col gap-4">
           <div>
-            <el-input
-              placeholder="请输入客服ID"
-              v-model="employeeId"
-              style="height: 40px"
-              maxlength="15"
-            />
+            <el-input placeholder="请输入客服ID" v-model="employeeId" style="height: 40px" maxlength="15" />
           </div>
           <div class="login-auth-info-button">
-            <common-button
-              type="primary"
-              class="button-auth"
-              @click="handleLogin"
-              :loading="showLoading"
-              >授权登录</common-button
-            >
+            <common-button type="primary" class="button-auth" @click="handleLogin"
+              :loading="showLoading">授权登录</common-button>
           </div>
         </div>
       </div>
@@ -70,6 +60,7 @@ clearLoginInfo();
 .button-auth {
   font-weight: 600;
 }
+
 .login {
   display: flex;
   flex-direction: column;
@@ -80,6 +71,7 @@ clearLoginInfo();
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &-info {
       width: 520px;
       display: flex;
@@ -99,12 +91,14 @@ clearLoginInfo();
         align-items: center;
         gap: 5px;
         font-size: 20px;
+
         svg {
           width: 28px;
           height: 28px;
         }
       }
     }
+
     &-title {
       font-size: 28px;
       font-weight: 300;

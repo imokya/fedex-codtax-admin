@@ -75,7 +75,7 @@ const handleExport = async () => {
       endTime: endTime.value,
       reportType: 'SURVEY',
     });
-    const name = `${dayjs().format('YYYY-MM-DD')}微聊调研统计报表.xlsx`;
+    const name = `${dayjs().format('YYYY-MM-DD')}税金统计报表.xlsx`;
     downloadFile(blob, name);
   } catch (error) {
     if (error === 'noData') {
@@ -105,7 +105,7 @@ onMounted(() => {
     <el-card>
       <div class="card-header flex items-center justify-between">
         <div class="card-header-title">
-          <div class="card-header-title-label">微聊调研统计</div>
+          <div class="card-header-title-label">税金统计报表</div>
           <div class="card-header-title-icon" title="刷新" @click="handleRefresh">
             <svg-icon icon="reload" />
           </div>
