@@ -25,7 +25,7 @@ const auth = async () => {
         name: `${result.employeeId}`,
         channel: result.channel,
         permission: {
-          menus: ['surveyManage', 'uploadManage']
+          menus: ['surveyManage', 'uploadManage', 'messageManage']
         },
       } as UserInfo;
       const token = result?.token || '';

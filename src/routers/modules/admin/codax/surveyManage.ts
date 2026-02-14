@@ -3,11 +3,11 @@ import AdminLayout from '@/layouts/admin/index.vue';
 export default {
   path: '/admin',
   component: AdminLayout,
-  redirect: '/admin/report/survey',
+  redirect: '/admin/codtax/survey',
   name: 'surveyManage',
   children: [
     {
-      path: '/admin/report/survey',
+      path: '/admin/codtax/survey',
       name: 'surveyReport',
       component: () => import('@/views/admin/report/Survey/index.vue'),
       meta: {

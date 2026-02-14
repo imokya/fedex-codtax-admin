@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import surveyManage from './modules/admin/report/surveyManage';
+import surveyManage from './modules/admin/codax/surveyManage';
 import uploadManage from './modules/admin/codax/uploadManage';
+import messageManage from './modules/admin/codax/messageManage';
 
 
 
@@ -11,10 +12,6 @@ import { useUserStore } from '@/stores/admin/user';
  * 公开路由表
  */
 export const publicRoutes = [
-  {
-    path: '/',
-    redirect: '/login'
-  },
   {
     path: '/login',
     component: () => import('@/views/login/index.vue'),
@@ -42,7 +39,8 @@ export const publicRoutes = [
  */
 export const privateRoutes = [
   surveyManage,
-  uploadManage
+  uploadManage,
+  messageManage
 ];
 
 const router = createRouter({
