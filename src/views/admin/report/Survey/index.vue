@@ -15,6 +15,8 @@ import { showSuccess, showError } from '@/utils/methods';
 import { downloadFile } from '@/utils/admin/methods';
 import { disabledReportDate } from '@/utils/admin/methods';
 
+import * as echarts from 'echarts'
+
 const tableData = ref<any[]>([]);
 const total = ref(1);
 const page = ref(1);
@@ -28,6 +30,54 @@ const currentChannel = ref('');
 const channelList = ref<ChannelData[]>([]);
 const totalTriggerSuccessCount = ref(0);
 const totalNotTriggerCount = ref(0);
+const chartRef = ref()
+
+const dates = [
+  1773417600000, 1773504000000, 1773590400000, 1774454400000
+]
+
+const initChats = () => {
+  const chart = echarts.init(chartRef.value);
+  chart.setOption({
+    tooltip: {
+      trigger: 'axis',
+
+    },
+    grid: {
+      left: 50,
+      right: 50
+    },
+    xAxis: {
+      type: 'time',
+      name: '日期',
+
+      axisLabel: {
+        showMinLabel: true,
+        showMaxLabel: true,
+        formatter: function (value: number) {
+
+          const date = new Date(value);
+          return `${date.getMonth() + 1}月${date.getDate()}日`;
+        }
+      }
+    },
+    yAxis: {
+      type: 'value',
+      name: '人数'
+    },
+    series: [
+      {
+        type: 'line',
+        data: [
+          [1773417600000, 5],
+          [1773504000000, 15],
+          [1773590400000, 30],
+          [1774454400000, 50]
+        ]
+      }
+    ]
+  });
+}
 
 const handleCurrentChange = (value: number) => {
   page.value = value;
@@ -97,12 +147,17 @@ const handleRefresh = async () => {
 
 onMounted(() => {
   getList();
-  // getChannelList();
+  initChats()
 });
 </script>
 <template>
   <div>
+
     <el-card>
+      <div class="echart">
+        <div class="card-header-title-label">税金统计图表</div>
+        <div id="chart" ref="chartRef"></div>
+      </div>
       <div class="card-header flex items-center justify-between">
         <div class="card-header-title">
           <div class="card-header-title-label">税金统计报表</div>
@@ -238,4 +293,9 @@ onMounted(() => {
   <chat-dialog v-if="showChatDialog" v-model="showChatDialog" session-id="1" @close="showChatDialog = false" />
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#chart {
+  width: 100%;
+  height: 400px;
+}
+</style>
